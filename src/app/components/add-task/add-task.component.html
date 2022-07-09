@@ -1,0 +1,19 @@
+
+<!-- [] are for inpust bidning,,,,()  are for outputs eg eventents for two way data binding use both[()] eg in forms ngmodel dirrective-->
+<!-- (ngSubmit handles submit event) -->
+<form  *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="text">Task</label>
+    <input type="text" name="text" [(ngModel)]="text" id="text" placeholder="Add task" />
+  </div>
+  <div class="form-control">
+    <label for="day">Day & Time</label>
+    <input type="text" name="day" [(ngModel)]="day" id="Day" placeholder="Add Day & TIme" />
+  </div>
+  <div class="form-control form-control-check">
+    <label for="reminder">Set Reminder</label>
+    <input type="checkbox" name="reminder" [(ngModel)]="reminder" id="reminder" />
+  </div>
+ 
+  <input type="submit" value="Save Task" class="btn btn-block" />
+</form>

@@ -1,0 +1,9 @@
+<!-- because task doesnt exist yet use $event to wait for the submit event to give the task value -->
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
+<app-task-item
+  *ngFor="let task of tasks"
+  [task]="task"
+  (onDeleteTask)="deleteTask(task)"
+  (onToggleReminder)="toggleReminder(task)"
+></app-task-item>
+<app-footer></app-footer>
